@@ -1,0 +1,471 @@
+.nb-form.nb-form-default {
+  position: relative;
+  .nb-form-item {
+    position: relative;
+    border: 1px #e1e1e1 solid;
+    border-radius: 3px;
+    padding: 3px 20px 3px 0;
+    margin-bottom: 20px;
+    > label, > div {
+      display: inline-block;
+      font-size: 12px;
+    }
+    > label {
+      position: absolute;
+      z-index: 1;
+      color: #797979;
+      font-weight: 400;
+      border-right: 1px #ddd solid;
+      min-width: 110px;
+      text-align: left;
+      padding-left: 20px;
+      margin-top: 7px;
+      > em {
+        font-style: normal;
+        vertical-align: sub;
+        padding-left: 2px;
+        color: red;
+      }
+    }
+    > div {
+      width: 100%;
+      .nb-form-control {
+        // margin-left: 18px;
+        width: 100%;
+        padding-left: 110 + 18px;
+        padding-top: 9px;
+        padding-right: 0;
+        padding-bottom: 9px;
+        border: none;
+        color: #797979;
+      }
+      a.nb-form-control {
+        display: inline-block;
+        width: auto;
+        padding-top: 7px;
+        padding-bottom: 7px;
+        color: @a-color;
+      }
+    }
+    // rewrite elemen select ui
+    .nb-form-control.el-select {
+      padding-top: 2px;
+      padding-bottom: 2px;
+      .el-input__icon {
+        right: -9px;
+      }
+      .el-input__inner {
+        border: none;
+        height: auto;
+        padding: 0;
+        padding-top: 7px;
+        padding-bottom: 7px;
+        color: #797979;
+      }
+    }
+    &.nb-form-error {
+      border: 1px @red solid;
+      transition: all .3s;
+    }
+  }
+  .el-checkbox {
+    color: #797979;
+    font-weight: 400;
+    margin-bottom: initial;
+    font-size: 14px;
+  }
+  hr {}
+}
+
+// nb form blue theme
+.nb-form.nb-form-blue {
+  position: relative;
+  > h2 {
+    position: relative;
+    font-weight: normal;
+    font-size: 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid @line-gray;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    > div {
+      position: absolute;
+      top: 50%;
+      right: 0px;
+      -webkit-transform: translateY(-50%);
+      transform: translateY(-50%);
+    }
+  }
+  .nb-form-item {
+    position: relative;
+    margin-bottom: 20px;
+    display: flex;
+    flex-flow: row;
+    > label, > div {
+      display: inline-block;
+      font-size: 12px;
+    }
+    > label {
+      color: #797979;
+      font-weight: 400;
+      min-width: 110px;
+      text-align: left;
+      padding-left: 10px;
+      margin-top: 7px;
+      overflow: hidden;
+      position: relative;
+      > span {
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        transform: translate(0, -50%);
+        // margin-top: -11px;
+      }
+      em {
+        font-style: normal;
+        vertical-align: sub;
+        padding-left: 2px;
+        color: red;
+      }
+    }
+    > div {
+      flex: 1;
+      width: 100%;
+      > span.input-symbol {
+        display: block;
+        position: absolute;
+        z-index: 2;
+        height: 100%;
+        top: 0;
+        right: 10px;
+        padding: 8px 0;
+        color: #b7b7b7;
+        line-height: 21px;
+      }
+      > span.input-loading {
+        background-color: #fff;
+        position: absolute;
+        z-index: 3;
+        top: 1px;
+        right: 1px;
+        // transform: translate(0, -50%);
+        padding: 9px;
+      }
+      > p {
+        margin: 0;
+        &.form-error {
+          color: @red;
+        }
+      }
+      .nb-form-control {
+        // margin-left: 18px;
+        width: 100%;
+        // padding-left: 110 + 18px;
+        padding-top: 9px;
+        padding-right: 10px;
+        padding-bottom: 9px;
+        color: #797979;
+        border: 1px @form-control-border-color solid;
+        border-radius: 2px;
+        text-indent: 10px;
+
+        &:hover {
+          border-color: #b4bccc;
+        }
+
+        &.has-symbol {
+          padding-right: 30px;
+        }
+
+        .nb-upload {
+          .el-upload--text {
+            text-indent: 0;
+            a {
+              // line-height: 20px;
+              line-height: 24px;
+              height: 24px;
+            }
+          }
+        }
+        .uploading-tips {
+          top: 2px;
+          .el-icon-loading {
+            &:before {
+              margin-left: -9px;
+            }
+          }
+        }
+        &.nb-form-file-control {
+          padding-top: 7px;
+          padding-bottom: 7px;
+          padding-right: 0;
+          div.upload-noselect.multiple-noselect {
+            width: 100%;
+            transform: none;
+            top: 28px;
+            ul {
+              li {
+                position: relative;
+                // padding: 2px 0 3px;
+                padding: 0;
+                height: 24px;
+                line-height: 24px;
+                span {
+                  text-indent: 0;
+                  position: absolute;
+                  top: 50%;
+                  right: 10px;
+                  transform: translate(0, -50%);
+                  cursor: pointer;
+                  transition: all .2s;
+                }
+                &:hover {
+                  background-color: #fbfbfb;
+                  a {
+                    color: @a-color-hover;
+                  }
+                  span {
+                    color: #222;
+                    &:hover {
+                      color: @red;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+        &:focus {
+          border: 1px @form-control-border-focus solid;
+        }
+        &.nb-from-control-textarea {
+          transition: height .3s;
+        }
+
+        // readonly type
+        &.nb-form-readonly {
+          border: 0;
+          text-indent: 0;
+        }
+      }
+      a.nb-form-control {
+        display: inline-block;
+        width: auto;
+        padding-top: 7px;
+        padding-bottom: 7px;
+        color: @a-color;
+      }
+      > p {
+        color: @text-color-light;
+        padding-top: 5px;
+      }
+
+      .nb-form-row {
+        display: flex;
+        flex-flow: row;
+        > .nb-form-col {
+          flex: 1;
+          &.nb-form-error {
+            .nb-form-control,
+            input.el-input__inner {
+              border: 1px red solid;
+              &:hover {
+                border-color: #b4bccc;
+              }
+            }
+          }
+        }
+        .nb-form-deliver {
+          // width: 30px;
+          position: relative;
+          padding: 0 18px;
+          > span {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: @text-color-dark;
+          }
+        }
+      }
+    }
+    // rewrite elemen select ui
+    .nb-form-control.el-select {
+      text-indent: 0;
+      padding: 0;
+      border: 0;
+      .el-input__icon {
+        right: -9px;
+      }
+      .el-input__inner {
+        padding-left: 0;
+        text-indent: 10px;
+        height: 36px;
+        color: #797979;
+        .el-icon-arrow-up {
+          &:before {
+            margin-left: -10px;
+          }
+        }
+      }
+    }
+    .el-date-editor.form-control-picker {
+      width: 100%;
+      .el-input__inner {
+        height: 36px;
+      }
+    }
+    &.nb-form-error {
+      .nb-form-control {
+        border: 1px @red solid;
+        transition: all .3s;
+      }
+      .el-select, .el-date-editor {
+        border: 0;
+        .el-input__inner {
+          border: 1px @red solid;
+          &:hover {
+            border-color: @form-control-border-hover;
+          }
+          &:focus {
+            border-color: @form-control-border-focus;
+          }
+        }
+      }
+    }
+    textarea {
+      transition: all .3s;
+    }
+
+
+    > .nb-form-row {
+      > .nb-form-item {
+        margin-bottom: 0;
+        > label {
+          text-indent: 15px;
+          span.file-label-sp {
+            margin-top:auto!important;
+            left: 10px;
+          }
+        }
+      }
+      &.nb-form-row-sm {
+        > .nb-form-item {
+          > label {
+            text-indent: 0;
+            min-width: 80px;
+          }
+        }
+      }
+    }
+    > .nb-form-row:first-child {
+      > .nb-form-item {
+        > label {
+          text-indent: 0;
+        }
+      }
+    }
+
+    &.pre-form-item {
+      .pre-form-content {
+        position: relative;
+        flex: none!important;
+        width: 160px!important;
+        &.nb-form-subSelect {
+          width: 100px !important;
+          margin-right: -1px;
+          .nb-form-item {
+            margin: 0;
+          }
+        }
+        > div {
+          > span {
+            margin-right: 5px;
+          }
+        }
+      }
+    }
+  }
+  .el-checkbox {
+    color: #797979;
+    font-weight: 400;
+    margin-bottom: initial;
+    font-size: 14px;
+  }
+  hr {}
+}
+form.nb-form-dialog {
+  .nb-form {
+    padding-bottom: 70px;
+  }
+  .nb-form-footer {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+  }
+}
+
+
+// btn reset
+.nb-form-footer {
+  @color: #0081ff;
+  border-top: 1px #eee solid;
+  padding: 18px 20px;
+  .btn {
+    border: 1px @color solid;
+    background-color: transparent;
+    color: @color;
+    &:hover, &:focus {
+      border-color: @color;
+    }
+    &.btn-primary {
+      min-width: 96px;
+      background-color: @color;
+      border-color: @color;
+      color: #fff;
+      &:hover, &:focus {
+        background-color: @color;
+        border-color: @color;
+      }
+      &.btn-outline {
+        color: @blue;
+      }
+    }
+  }
+}
+
+
+.nb-form.nb-form-has-operating {
+  .nb-form-item {
+    &:hover {
+      > div.row-panel {
+        > span {
+          color: #0081ff;
+        }
+      }
+    }
+    > div.row-panel {
+      flex: none;
+      width: 40px;
+      background-color: #fff;
+      position: relative;
+      cursor: pointer;
+      > span {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: color .25s;
+      }
+      &:hover {
+        > span {
+          color: red;
+        }
+      }
+    }
+  }
+}

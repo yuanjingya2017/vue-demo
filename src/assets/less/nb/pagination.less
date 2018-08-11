@@ -1,0 +1,233 @@
+@p-default: 32px;
+@p-small: 30px;
+@p-tiny: 24px;
+@p-large: 40px;
+
+@p-c-default: #ddd;
+@p-c-hover: #efefef;
+@p-c-active: #0081ff;
+
+@p-space: 2px;
+
+div.el-pagination {
+  > button.btn-prev,
+  > button.btn-next {
+    transition: all .2s;
+    display: inline-block;
+    padding: 0;
+    border: 1px @p-c-default solid;
+    height: @p-default;
+    width: @p-default;
+    min-width: @p-default;
+    line-height: @p-default;
+    border-radius: 2px;
+    &:hover {
+      border-color: @p-c-active;
+    }
+    &.disabled {
+      &:hover {
+        border-color: @p-c-default;
+      }
+    }
+  }
+  > button.btn-prev {
+    margin-right: 8px;
+  }
+  > button.btn-next {
+    margin-left: 8px;
+  }
+
+  ul.el-pager {
+    > li {
+      &.number,
+      &.btn-quicknext,
+      &.btn-quickprev {
+        transition: all .2s;
+        border: 1px @p-c-default solid;
+        border-radius: 2px;
+        width: @p-default;
+        height: @p-default;
+        line-height: @p-default - 2px;
+        min-width: @p-default;
+        margin-left: @p-space;
+        margin-right: @p-space;
+        color: #666;
+        font-weight: 500;
+        &:hover {
+          border-color: @p-c-active;
+          color: @p-c-active;
+        }
+        &.active {
+          background-color: @p-c-active;
+          border-color: @p-c-active;
+          color: #fff;
+        }
+      }
+      &.btn-quicknext,
+      &.btn-quickprev {
+        border-color: transparent;
+        &:hover {
+          border-color: transparent;
+        }
+      }
+      &.el-icon-more:before {
+        vertical-align: -2px;
+      }
+    }
+  }
+
+  .el-pagination__total {
+    height: @p-default;
+    line-height: @p-default;
+  }
+
+  .el-pagination__jump {
+    .el-input {
+      .el-input__inner {
+        height: @p-default;
+      }
+    }
+  }
+
+  .el-pagination__sizes {
+    .el-input {
+      .el-input__inner {
+        height: @p-default;
+      }
+    }
+  }
+  &.pagination-full-layout {
+    .el-pagination__total {
+      float: left;
+    }
+    .el-pagination__sizes {
+      margin-right: 0;
+      .el-input {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &.nb-pagination-clean {
+    > button.btn-prev,
+    > button.btn-next {
+      border: 0;
+      margin: 0;
+      width: auto;
+      min-width: auto;
+    }
+    > button.btn-prev {
+      padding-right: 6px;
+    }
+    > button.btn-next {
+      padding-left: 6px;
+    }
+    ul.el-pager {
+      > li {
+        border: 0;
+        &.number,
+        &.btn-quicknext,
+        &.btn-quickprev {
+          width: auto;
+          min-width: auto;
+          padding-left: 6px;
+          padding-right: 6px;
+        }
+        &.active {
+          border: 0;
+          background-color: transparent;
+          color: @p-c-active;
+        }
+      }
+    }
+  }
+
+  &.nb-pagination-xs {
+    > button.btn-prev,
+    > button.btn-next {
+      height: @p-tiny;
+      width: @p-tiny;
+      min-width:@p-tiny;
+      line-height: @p-tiny;
+    }
+    > button.btn-prev {
+      margin-right: 5px;
+    }
+    > button.btn-next {
+      margin-left: 5px;
+    }
+
+    ul.el-pager {
+      > li {
+        &.number,
+        &.btn-quicknext,
+        &.btn-quickprev {
+          width: @p-tiny;
+          height: @p-tiny;
+          line-height: @p-tiny - 2px;
+          min-width: @p-tiny;
+        }
+      }
+    }
+  }
+
+  &.nb-pagination-sm {
+    > button.btn-prev,
+    > button.btn-next {
+      height: @p-small;
+      width: @p-small;
+      min-width:@p-small;
+      line-height: @p-small;
+    }
+    > button.btn-prev {
+      margin-right: 8px;
+    }
+    > button.btn-next {
+      margin-left: 8px;
+    }
+
+    ul.el-pager {
+      > li {
+        &.number,
+        &.btn-quicknext,
+        &.btn-quickprev {
+          width: @p-small;
+          height: @p-small;
+          line-height: @p-small - 2px;
+          min-width: @p-small;
+        }
+      }
+    }
+  }
+
+  &.nb-pagination-lg {
+    > button.btn-prev,
+    > button.btn-next {
+      height: @p-large;
+      width: @p-large;
+      min-width:@p-large;
+      line-height: @p-large;
+      font-size: 16px;
+    }
+    > button.btn-prev {
+      margin-right: 8px;
+    }
+    > button.btn-next {
+      margin-left: 8px;
+    }
+
+    ul.el-pager {
+      > li {
+        &.number,
+        &.btn-quicknext,
+        &.btn-quickprev {
+          width: @p-large;
+          height: @p-large;
+          line-height: @p-large - 2px;
+          min-width: @p-large;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}

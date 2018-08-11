@@ -1,0 +1,222 @@
+/**
+* 自定义公共样式类集合
+*/
+// 搜索区域公共样式
+.search_row{
+  border: 1px solid #dcdcdc;
+  margin-bottom: 30px;
+  padding: 20px 0 0;
+  .el-input--small, .el-input, .el-date-editor.el-input, .el-date-editor.el-input__inner{
+    box-sizing: border-box;
+    width: 174px;
+  }
+  .search_form{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    .el-form-item{
+      .el-form-item__label{
+        width: 140px;
+      }
+    }
+    .search_row_btn{
+      width: 120px;
+      padding-right: 40px;
+    }
+  }
+  // 最大964px时
+  @media only screen and (max-width: 965px){
+    .el-form-item{
+      .el-form-item__label{
+        width: 120px;
+      }
+    }
+    .search_row_btn{
+      width: 100px;
+      padding-right: 20px;
+    }
+  }
+  // 最大1050px时
+  @media only screen and (max-width: 1051px){
+    .el-form-item{
+      .el-form-item__label{
+        width: 140px;
+      }
+    }
+    .search_row_btn{
+      width: 120px;
+      padding-right: 40px;
+    }
+  }
+  // 最大1220px时
+  @media only screen and (max-width: 1220px){
+    .el-form-item{
+      .el-form-item__label{
+        width: 120px;
+      }
+    }
+    .search_row_btn{
+      width: 100px;
+      padding-right: 20px;
+    }
+  }
+}
+// .el-tabs 的margin样式覆盖
+.el-tabs{
+  .el-tabs__header{
+    margin: unset;
+  }
+}
+// dialog 自定义样式 无头部内容
+.dialog_no_header{
+  .el-dialog__header{
+    display: none;
+  }
+}
+.el-dialog{
+  .el-dialog__header{
+    text-align: center;
+    padding: 15px;
+    border-bottom: 1px solid #dcdcdc;
+    .el-dialog__title{
+      font-size: 14px;
+    }
+  }
+}
+// 新增样式
+.add_item{
+  height: 30px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  span{
+    float: right;
+    border: solid 1px #dcdcdc;
+    padding: 4px 26px;
+    cursor: pointer;
+  }
+}
+.el-message-box__wrapper{
+  .el-message-box{
+    .el-message-box__header{
+      padding: 15px;
+      .el-message-box__title{
+        text-align: center;
+        font-size: 14px;
+      }
+      .el-message-box__headerbtn{
+        display: none;
+      }
+    }
+    .el-message-box__content{
+      padding-top: 15px;
+      display: flex;
+      justify-content: center;
+      .el-message-box__status{
+        position: unset;
+        top: unset;
+        transform: unset;
+        font-size: 14px !important;
+        align-self: center;
+      }
+      .el-message-box__message{
+        padding-left: 10px;
+      }
+    }
+  }
+}
+// 已开启委托运营，每天自动更新海报内容至企业App中 提示样式
+.warning_tip{
+  margin: 20px 20px 10px 0;
+  color: #969696;
+}
+// 页面级列表页组件的边距
+.common_list_wrapper{
+  padding: 20px;
+  overflow: hidden;
+}
+// 页面级详情页组件的边距
+.common_page_wrapper{
+  padding: 40px 100px 20px 20px;
+  overflow: hidden;
+  .common_page_wrapper_dialog {
+    padding: 30px 60px;
+    .common_page_wrapper_dialog_btn{
+      margin-top: 20px;
+    }
+  }
+}
+// 下拉选择框内字体大小修改
+.el-select-dropdown__list{
+  .el-select-dropdown__item{
+    font-size: 12px;
+  }
+}
+// raido, input , form, 的字体大小调整
+.el-radio__label, .el-input--small, .el-input,
+.el-form-item__label, .el-form-item__content,
+.el-tabs__item, .el-textarea{
+  font-size: 12px;
+}
+.el-button-group .el-button--primary:last-child{
+  padding: 9px 5px;
+  border-bottom: none;
+}
+.pd20{
+  padding-top: 20px;
+}
+// 列表组件中，标题等的字体颜色控制
+.el-table{
+  .el-table__body{
+    .jump_detail{
+      cursor: pointer;
+      color: #007aff;
+    }
+  }
+}
+// 详情页公共的左右两边布局
+.detail_info{
+  min-width: 700px;
+  padding: 0 30px;
+  border: 1px solid transparent;
+  .detail_row{
+    margin-top: 20px;
+    .left_name{
+      text-align: right;
+    }
+    .right_value{
+      img{
+        max-width: 100%;
+        height: 200px;
+      }
+    }
+    // 企业详情 企业描述可编辑时
+    .can_edit{
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      .right_value{
+        flex: 1;
+      }
+      .right_button{
+        width: 60px;
+      }
+      // 企业详情 企业描述编辑时的表单
+      .right_edit{
+        padding-left: 20px;
+        padding-top: 8px;
+      }
+    }
+  }
+}
+// 广告管理头部广告位的公共样式
+.brand_title{
+  display: flex;
+  flex-flow: row nowrap;
+  padding-left: 164px;
+}
+// 广告管理新增和编辑页的底部按钮居中
+.brand_button{
+  padding-right: 18px;
+}

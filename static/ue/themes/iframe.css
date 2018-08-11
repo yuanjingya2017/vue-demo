@@ -1,0 +1,8 @@
+/*可以在这里添加你自己的css*/
+.edui-editor div{
+  line-height: auto !important;
+  border: 1px solid red !important;
+}
+.edui-default  .edui-for-imagedes  .edui-icon {
+  background: url( ../images/imageDes.png ) no-repeat 2px 3px!important;
+}

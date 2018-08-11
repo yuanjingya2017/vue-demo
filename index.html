@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="user-scalable=yes,initial-scale=0,minimum-scale=0,maximum-scale=10.0">
+    <link rel="shortcut icon" href="https://www.newbanker.cn/images/favicon.ico">
+
+    <!-- for seo-begin -->
+    <meta name="Keywords" content="NewBanker" />
+    <meta name="Description" content="NewBanker" />
+    <meta name="Copyright" content="NewBanker">
+
+    <!--[if lte IE 8]>
+    <script type="text/javascript">window.location.href='/ies.html'</script>
+    <![endif]-->
+
+    <title>NewBanker Vue Bootstrap</title>
+  </head>
+  <body>
+
+    <div id="app">
+      <style>
+      html, body, #app {
+      	margin: 0;
+      	padding: 0;
+      	background: #fafafa;
+      	font-size: 12px;
+      	color: #777;
+      }
+
+      span {
+      	position: absolute;
+      	top: 50%;
+      	left: 50%;
+      	transform: translate(-50%, -50%);
+      }
+
+      @-webkit-keyframes ball-scale-multiple {
+      	0% {
+      		-webkit-transform: scale(0);
+      		transform: scale(0);
+      		opacity: 0;
+      	}
+
+      	5% {
+      		opacity: 1;
+      	}
+
+      	100% {
+      		-webkit-transform: scale(1);
+      		transform: scale(1);
+      		opacity: 0;
+      	}
+      }
+
+      @keyframes ball-scale-multiple {
+      	0% {
+      		-webkit-transform: scale(0);
+      		transform: scale(0);
+      		opacity: 0;
+      	}
+
+      	5% {
+      		opacity: 1;
+      	}
+
+      	100% {
+      		-webkit-transform: scale(1);
+      		transform: scale(1);
+      		opacity: 0;
+      	}
+      }
+
+      .__ball-scale-multiple {
+      	position: relative;
+      	-webkit-transform: translateY(-30px);
+      	transform: translateY(-30px);
+      }
+
+      .__ball-scale-multiple > div:nth-child(2) {
+      	-webkit-animation-delay: -0.4s;
+      	animation-delay: -0.4s;
+      }
+
+      .__ball-scale-multiple > div:nth-child(3) {
+      	-webkit-animation-delay: -0.2s;
+      	animation-delay: -0.2s;
+      }
+
+      .__ball-scale-multiple > div {
+      	background-color: #fff;
+      	width: 15px;
+      	height: 15px;
+      	border-radius: 100%;
+      	margin: 2px;
+      	-webkit-animation-fill-mode: both;
+      	animation-fill-mode: both;
+      	position: absolute;
+      	left: -30px;
+      	top: 0px;
+      	opacity: 0;
+      	margin: 0;
+      	width: 60px;
+      	height: 60px;
+      	-webkit-animation: ball-scale-multiple 1s 0s linear infinite;
+      	animation: ball-scale-multiple 1s 0s linear infinite;
+      }
+
+      .__loader {
+      	box-sizing: border-box;
+      	display: -ms-flexbox;
+      	display: flex;
+      	-ms-flex: 0 1 auto;
+      	flex: 0 1 auto;
+      	-ms-flex-direction: column;
+      	flex-direction: column;
+      	-ms-flex-positive: 1;
+      	flex-grow: 1;
+      	-ms-flex-negative: 0;
+      	flex-shrink: 0;
+      	-ms-flex-align: center;
+      	align-items: center;
+      	-ms-flex-pack: center;
+      	justify-content: center;
+      	position: absolute;
+      	top: 50%;
+      	left: 50%;
+      	transform: translate(-50%, -50%);
+      }
+
+      .__ball-scale-multiple {
+      	position: relative;
+      	-webkit-transform: translateY(-30px);
+      	transform: translateY(-30px);
+      }
+
+      .ball-beat > div, .__ball-scale-multiple>div {
+      	background-color: #0081ff;
+      	border-radius: 100%;
+      }
+
+      .__ball-scale-multiple > div {
+      	position: absolute;
+      	left: -30px;
+      	top: 0;
+      	opacity: 0;
+      	margin: 0;
+      	width: 60px;
+      	height: 60px;
+      	-webkit-animation: ball-scale-multiple 1s 0s linear infinite;
+      	animation: ball-scale-multiple 1s 0s linear infinite;
+      }
+
+      .__ball-scale-multiple > div:nth-child(2) {
+      	-webkit-animation-delay: -.4s;
+      	animation-delay: -.4s;
+      }
+
+      .__ball-scale-multiple > div:nth-child(3) {
+      	-webkit-animation-delay: -.2s;
+      	animation-delay: -.2s;
+      }
+      </style>
+
+      <div class="__loader">
+        <div class="__ball-scale-multiple">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+
+    </div>
+
+  </body>
+</html>
