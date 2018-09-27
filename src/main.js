@@ -15,6 +15,10 @@ import {
 } from '@/common/const'
 
 Vue.config.productionTip = false
+Vue.config.keyCodes = {
+  v: 67,
+  ReturnKey: 88
+}
 
 Vue.use(Filters)
 Vue.use(Directive)

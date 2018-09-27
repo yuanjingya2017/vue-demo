@@ -46,20 +46,14 @@ export default {
       default: 'image'
     }
   },
+  inheritAttrs: false,
   render (upload) {
     switch (this.type) {
       case 'button':
       default:
         return upload(button, {
           props: {
-            btnText: this.btnText,
-            maxLength: this.maxLength,
-            value: this.value,
-            name: this.name,
-            tips: this.tips,
-            listType: this.listType,
-            maxSize: this.maxSize,
-            fileType: this.fileType
+            ...this$attrs
           },
           on: {
             input: (v) => this.$emit('input', v)

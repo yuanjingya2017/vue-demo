@@ -441,3 +441,7 @@ export const getModuleStatus = (type, obj, text) => {
     }
   }
 }
+export function Person (firstName, lastName) {
+  this.firstName = firstName
+  this.lastName = lastName
+}

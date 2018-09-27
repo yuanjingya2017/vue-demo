@@ -50,6 +50,7 @@ export default {
     }
   },
   data () {
+    console.log(this.maxLength, 111)
     return {
       loading: false
     }

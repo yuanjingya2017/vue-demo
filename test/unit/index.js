@@ -1,7 +1,9 @@
 import Vue from 'vue'
 
 Vue.config.productionTip = false
-
+Vue.config.keyCodes = {
+  returnKey: 13
+}
 // require all test file_admin (file_admin that ends with .spec.js)
 const testsContext = require.context('./specs', true, /\.spec$/)
 testsContext.keys().forEach(testsContext)

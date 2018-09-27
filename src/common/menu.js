@@ -17,6 +17,36 @@ export const menu = {
           name: 'class与style绑定',
           webUrl: 'vueStyle',
           subResources: []
+        },
+        {
+          id: 'demo00010003',
+          name: '事件处理',
+          webUrl: 'vueEvent',
+          subResources: []
+        },
+        {
+          id: 'demo00010004',
+          name: '表单输入绑定',
+          webUrl: 'vueForm',
+          subResources: []
+        },
+        {
+          id: 'demo00010005',
+          name: 'prop',
+          webUrl: 'vueProp',
+          subResources: []
+        },
+        {
+          id: 'demo00010006',
+          name: '自定义事件',
+          webUrl: 'vueSelfDefineEvent',
+          subResources: []
+        },
+        {
+          id: 'demo00010007',
+          name: '插槽',
+          webUrl: 'vueScope',
+          subResources: []
         }
       ]
     },
